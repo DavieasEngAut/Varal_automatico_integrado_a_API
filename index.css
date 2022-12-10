@@ -1,0 +1,91 @@
+body    {
+
+    background-color: rgb(115, 198, 236);
+    font-size: 15px;
+    
+}
+
+h1 {
+
+padding-top: 2em;
+color: rgb(0, 0, 0);
+font-family: Arial, Helvetica, sans-serif;
+box-shadow: inset, black;
+text-align: center;
+
+
+}
+
+#botoes {
+    
+    max-width: 65rem;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 5rem;
+    text-align: center;
+    background: rgb(255, 255, 255);
+    border: 0.5rem solid #34495e;
+    
+    width: 590px;
+    height:370px;
+    border: 1px solid; 
+    border-color: rgb(0, 0, 0) rgb(0, 0, 0) rgb(0, 0, 0) rgb(0, 0, 0);
+    border-radius: 1cm;
+}
+
+*{
+    box-sizing: border-box;
+  }
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+button {
+  font-size: 25px;
+  background: #6dbff5;
+  color: #fff;
+  border: 0.15rem solid #1a1b1b;
+  padding: 0.75em 0.88em;
+  margin: 1em;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+button:hover {
+  color: #f3f3f3;
+}
+button::after {
+  content: "";
+  background: #189eec;
+  position: absolute;
+  z-index: -1;
+  padding: 0.85em 0.75em;
+  display: block;
+}
+button[class^="slide"]::after {
+  transition: all 0.35s;
+}
+button[class^="slide"]:hover::after {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: all 0.35s;
+}
+button.slide_from_left::after {
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  right: 100%;
+}
+  
+#creditos {
+
+font-style: italic;
+font-size: 0.88rem;
+padding-top: 5em;
+text-align: justify;
+
+}
