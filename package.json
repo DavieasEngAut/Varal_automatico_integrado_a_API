@@ -1,0 +1,26 @@
+{
+  "name": "varal_automatico_integrado_a_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./main/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Davieas/Varal_automatico_integrado_a_API.git"
+  },
+  "author": "Davi Alexandre",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Davieas/Varal_automatico_integrado_a_API/issues"
+  },
+  "homepage": "https://github.com/Davieas/Varal_automatico_integrado_a_API#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "serialport": "^10.5.0",
+    "socket.io": "^4.5.4"
+  }
+}
