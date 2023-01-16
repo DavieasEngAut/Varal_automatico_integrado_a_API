@@ -1,10 +1,9 @@
-import { Express } from "express";
-import { Socket } from "socket.io";
-import { SerialPort } from "serialport";
-import express from "express";
+const Express  = require('serialport')
+const Socket = require('socket.io')
 const http = require('http')
 
-const app = express();
+
+const app = Express();
 
 app.get('/', (req, res) => {
     res.send('Integration Arduino with NodeJS');
@@ -14,6 +13,10 @@ app.get('/', (req, res) => {
   app.listen(8080, () => {
     console.log('Server Started in port 8080');
   });
+
+
+
+
 
 
 const ReadLine = SerialPort.parses.ReadLine;

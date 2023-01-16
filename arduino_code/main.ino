@@ -1,3 +1,6 @@
+// LiquidCrystal - Version: Latest 
+#include <LiquidCrystal.h>
+
 /*Define pins for rain sensor*/
 //Definiçao pino Sensor de Chuva
 #define pinRainsensor A0
@@ -16,23 +19,26 @@ int valorCursor2;
 //Variavel para leitura do valor do Sensor de Chuva
 int valorSensor;
 
-//Pins for motor clothesline 1
-// Pinos Motor Varal 1
-#define pinMot1A 10 
-#define pinMot1B 9
+//Pin for motor clothesline
+// Pino Motor Varal 
+#define pinMot 10 
 
-//Pins for motor clothesline 2
-// Pinos Motor Varal 2
-#define pinMot2A 5
-#define pinMot2B 6
 
 /*Set Velocity for motors*/
 /*Velocidade para os motores*/
 #define velocidade 11
 
+
+//Functions declaration
+void exporVaral();
+
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+
 void setup(){
 
     Serial.begin(9600);
+    
+    lcd.begin(16, 2);
 
      /*Set pins for limit switches*/   
     //Set dos pinos do fim de curso
@@ -41,96 +47,75 @@ void setup(){
   
   //the motor pins to release energy
   // Deixando os pinos dos motores para soltarem energia
-    pinMode(pinMot1A, OUTPUT);
-    pinMode(pinMot1B, OUTPUT);
-    pinMode(pinMot2A, OUTPUT);
-    pinMode(pinMot2B, OUTPUT);
-
-     /*Define pin for velocity*/ 
-    /*Definiçao pino de velocidade*/
-    pinMode(velocidade, OUTPUT);
-
+    pinMode(pinMot, OUTPUT);
 
 }
 
 void loop(){
+// LCD Code
+  lcd.clear();
 
-//reading of the limit switches Sensor values
-// leitura dos valores do Sensor de Fim de curso
+  lcd.setCursor(3, 0);
+ 
+  lcd.print("Varal automatico");
+  lcd.setCursor(3, 1);
+  lcd.print(" Automatic Clothesline");
+  delay(5000);
+    valorSensor = analogRead(pinRainsensor);
     valorCursor = digitalRead(switchCursor);
     valorCursor2 = digitalRead(switchCursor2);
 
-//Reading rain sensor values 
-// leitura dos Valores sensor de chuva 
-    valorSensor = analogRead(pinRainsensor);
-    valorSensor = map(pinRainsensor, 0, 1023, 0, 1000);
-
-/*
-Showing sensor values in real time in serial
-*/
-/*Mostrando os valores do sensor no Serial do arduino*/
-    Serial.print(valorSensor);
-    delay(100);
-
-    Serial.println("Valor Fim de Curso 1");
-    Serial.print(valorCursor);
-    delay(500);
-
-    Serial.println("Valor Fim de Curso 1");
-    Serial.print(valorCursor2);
-    delay(500);
-
-
-    //Print of Rain Sensor Value
-   //Print do Valor do sensor de Chuva
-    Serial.print(valorSensor);
-
-
-  /*Motor Supervision and Activation*/
-  /*Supervisionamento dos Motores e ativaçâo*/
-
-
   //Conditional to retract the clothesline
   // Condicional para retrair o varal
-  if ((valorSensor < 800) && (valorCursor == 1) ){
+  if ((valorSensor < 75) && (valorCursor == 1) ){
 
-    digitalWrite(pinMot1A, HIGH);
-    digitalWrite(pinMot1B, LOW);
-    digitalWrite(pinMot2A, HIGH);
-    digitalWrite(pinMot2B, LOW);
+    exporVaral();
+    lcd.clear();
+    lcd.setCursor(3, 0);
+    lcd.print("Expondo Varal!!!");
+    delay(10000);
     valorSensor = analogRead(pinRainsensor);
     valorCursor = digitalRead(switchCursor);
-
-  }else{
-
-    digitalWrite(pinMot1A, LOW);
-    digitalWrite(pinMot1B, LOW);
-    digitalWrite(pinMot2A, LOW);
-    digitalWrite(pinMot2B, LOW);
-
-
-
   }
   
   // Conditional to expose the clothesline to the sun
   // Condicional para expor o varal ao sol
- if ((valorSensor > 800) && (valorCursor2 == 1)){
+ if ((valorSensor > 75) && (valorCursor2 == 1)){
     
-    digitalWrite(pinMot1A, LOW);
-    digitalWrite(pinMot1B, HIGH);
-    digitalWrite(pinMot2A, LOW);
-    digitalWrite(pinMot2B, HIGH);
-    valorSensor = analogRead(pinRainsensor);
+    retrairVaral(); 
+    lcd.clear();
+    lcd.setCursor(3, 0);
+    lcd.print("Retraindo Varal!!!");
+    delay(10000);
     valorCursor2 = digitalRead(switchCursor2);
-
+    valorSensor = analogRead(pinRainsensor);
+  
     }else{
 
-    digitalWrite(pinMot1A, LOW);
-    digitalWrite(pinMot1B, LOW);
-    digitalWrite(pinMot2A, LOW);
-    digitalWrite(pinMot2B, LOW);
+    digitalWrite(pinMot, LOW);
 
 
 
     }
+}
+
+/*Motor Supervision and Activation*/
+/*Supervisionamento dos Motores e ativaçâo*/
+void exporVaral(){
+  
+    digitalWrite(pinMot, HIGH);
+    valorSensor = analogRead(pinRainsensor);
+    valorCursor = digitalRead(switchCursor);
+
+  
+} 
+
+void retrairVaral(){
+  
+  
+    digitalWrite(pinMot, LOW);
+    valorCursor2 = digitalRead(switchCursor2);
+    valorSensor = analogRead(pinRainsensor);
+  
+  
 }
