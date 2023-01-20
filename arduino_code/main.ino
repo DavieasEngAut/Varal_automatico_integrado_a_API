@@ -31,6 +31,7 @@ int valorSensor;
 
 //Functions declaration
 void exporVaral();
+void retrairVaral();
 
 LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
 
@@ -56,18 +57,21 @@ void loop(){
   lcd.clear();
 
   lcd.setCursor(3, 0);
- 
   lcd.print("Varal automatico");
+  delay(5000);
+
   lcd.setCursor(3, 1);
   lcd.print(" Automatic Clothesline");
   delay(5000);
-    valorSensor = analogRead(pinRainsensor);
-    valorCursor = digitalRead(switchCursor);
-    valorCursor2 = digitalRead(switchCursor2);
+
+  
+  valorSensor = analogRead(pinRainsensor);
+  valorCursor = digitalRead(switchCursor);
+  valorCursor2 = digitalRead(switchCursor2);
 
   //Conditional to retract the clothesline
   // Condicional para retrair o varal
-  if ((valorSensor < 75) && (valorCursor == 1) ){
+  if ((valorSensor < 800) && (valorCursor == 1) ){
 
     exporVaral();
     lcd.clear();
@@ -80,7 +84,7 @@ void loop(){
   
   // Conditional to expose the clothesline to the sun
   // Condicional para expor o varal ao sol
- if ((valorSensor > 75) && (valorCursor2 == 1)){
+ if ((valorSensor > 800) && (valorCursor2 == 1)){
     
     retrairVaral(); 
     lcd.clear();
@@ -103,9 +107,9 @@ void loop(){
 /*Supervisionamento dos Motores e ativaçâo*/
 void exporVaral(){
   
-    digitalWrite(pinMot, HIGH);
-    valorSensor = analogRead(pinRainsensor);
-    valorCursor = digitalRead(switchCursor);
+  digitalWrite(pinMot, HIGH);
+  valorSensor = analogRead(pinRainsensor);
+  valorCursor = digitalRead(switchCursor);
 
   
 } 
@@ -113,9 +117,9 @@ void exporVaral(){
 void retrairVaral(){
   
   
-    digitalWrite(pinMot, LOW);
-    valorCursor2 = digitalRead(switchCursor2);
-    valorSensor = analogRead(pinRainsensor);
+  digitalWrite(pinMot, LOW);
+  valorCursor2 = digitalRead(switchCursor2);
+  valorSensor = analogRead(pinRainsensor);
   
   
 }
