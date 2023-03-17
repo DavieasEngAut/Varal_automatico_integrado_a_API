@@ -1,42 +1,33 @@
-const Express  = require('serialport')
-const Socket = require('socket.io')
-const http = require('http')
+function Retrair(){
+if (document.getElementById('Retrair').value == "retraindo!"){
+  window.alert("Varal Retraindo")
+}
 
+}
 
-const app = Express();
-
-app.get('/', (req, res) => {
-    res.send('Integration Arduino with NodeJS');
-  });
+function Expor(){
+  if (document.getElementById('Expor').value == "expondo!"){
+    window.alert("Varal Expondo Ao Sol")
+  }
   
-  // Start the server on port 3000
-  app.listen(8080, () => {
-    console.log('Server Started in port 8080');
-  });
+  }
 
+  function Automatico(){
 
+    if (document.getElementById('Automatico'). value == "automatico"){
 
+      window.alert("Modo Automatico Ativado")
+      document.getElementById('Automatico').value = "manual"
+      document.getElementById('Automatico').textContent = "MODO MANUAL"
 
+      
 
+    }else{
+  
+      window.alert("Modo Manual Ativado")
+      document.getElementById('Automatico').value = "automatico"
+      document.getElementById('Automatico').textContent = "MODO AUTOMATICO"
 
-const ReadLine = SerialPort.parses.ReadLine;
-const parser = new ReadLine({delimiter: "\r\n"});
-const inputSerial = new SerialPort("PUT YOUR COMS INPUT ", {
+    }
 
-    baudRate: 9600,
-
-
-});
-
-inputSerial.pipe(parser);
-
-inputSerial.on("open", function (){
-
-    console.log("Conexao Estabelecida!!")
-
-
-
-})
-
-
-
+}   

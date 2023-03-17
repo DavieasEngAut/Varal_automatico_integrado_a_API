@@ -1,12 +1,14 @@
 body    {
-
-    background-color: rgb(115, 198, 236);
+    
+  flex: auto;
+    background-color: rgb(10, 7, 189);
     font-size: 15px;
     
 }
 
 h1 {
 
+flex: auto;
 padding-top: 2em;
 color: rgb(0, 0, 0);
 font-family: Arial, Helvetica, sans-serif;
@@ -18,17 +20,19 @@ text-align: center;
 
 #botoes {
     
-    max-width: 65rem;
-    width: 100%;
+    max-width: 100rem;
+    width: 50%;
     margin: 2rem auto;
-    padding: 5rem;
+    padding: 6rem;
     text-align: center;
     background: rgb(255, 255, 255);
-    border: 0.5rem solid #34495e;
+    border: 0.5rem solid #192a3b;
     
-    width: 590px;
-    height:370px;
+    width: 690px;
+    height: 470px;
     border: 1px solid; 
+    box-shadow: #1a1b1b;
+    box-sizing: 50%;
     border-color: rgb(0, 0, 0) rgb(0, 0, 0) rgb(0, 0, 0) rgb(0, 0, 0);
     border-radius: 1cm;
 }
@@ -44,7 +48,7 @@ text-align: center;
   }
 button {
   font-size: 25px;
-  background: #6dbff5;
+  background: #271bcc;
   color: #fff;
   border: 0.15rem solid #1a1b1b;
   padding: 0.75em 0.88em;
@@ -58,7 +62,7 @@ button:hover {
 }
 button::after {
   content: "";
-  background: #189eec;
+  background: #022c64;
   position: absolute;
   z-index: -1;
   padding: 0.85em 0.75em;
@@ -82,10 +86,10 @@ button.slide_from_left::after {
 }
   
 #creditos {
-
-font-style: italic;
+display: flex;
+justify-content: bottom;
 font-size: 0.88rem;
-padding-top: 5em;
+padding-top: 18vh;
 text-align: justify;
 
 }
