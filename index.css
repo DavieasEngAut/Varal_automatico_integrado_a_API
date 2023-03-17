@@ -68,14 +68,14 @@ button::after {
   display: block;
 }
 button[class^="slide"]::after {
-  transition: all 0.35s;
+  transition: all 0.20s;
 }
 button[class^="slide"]:hover::after {
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
-  transition: all 0.35s;
+  transition: all 0.20s;
 }
 button.slide_from_left::after {
   top: 0;
@@ -89,6 +89,6 @@ display: flex;
 justify-content: bottom;
 position: relative;
 font-size: 0.88rem;
-text-align: justify;
+text-align: auto;
 
 }
