@@ -35,6 +35,27 @@ text-align: center;
     border-color: rgb(0, 0, 0) rgb(0, 0, 0) rgb(0, 0, 0) rgb(0, 0, 0);
     border-radius: 2rem;
 }
+@media only screeb and (max-widt: 768px){
+
+#botoes {
+
+  width: 25%;
+  height: auto;
+
+}
+
+button {
+
+  font-size: auto;
+ width: auto;
+ height:auto;
+ padding: 0.75em 0.88em;
+
+}
+
+
+
+}
 
 *{
     box-sizing: border-box;

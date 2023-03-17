@@ -13,7 +13,7 @@ function Expor(){
   }
 
   function Automatico(){
-
+    
     if (document.getElementById('Automatico').value == "automatico"){
 
     
@@ -31,7 +31,7 @@ function Expor(){
       console.log(document.getElementById('Automatico').value)
       document.getElementById('Automatico').value = "automatico"
       document.getElementById('Automatico').textContent = "MODO AUTOMATICO"
-
+      
     }
 
 }   
