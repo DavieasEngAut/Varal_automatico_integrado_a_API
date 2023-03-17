@@ -103,8 +103,8 @@ void loop(){
     }
 }
 
-/*Motor Supervision and Activation*/
-/*Supervisionamento dos Motores e ativaçâo*/
+/*Motor Supervision and  Activation from website*/
+/*Supervisionamento dos Motores e site e ativaçâo*/
 void exporVaral(){
   
   digitalWrite(pinMot, HIGH);
