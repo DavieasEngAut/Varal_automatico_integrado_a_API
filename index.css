@@ -35,14 +35,13 @@ text-align: center;
     border-color: rgb(0, 0, 0) rgb(0, 0, 0) rgb(0, 0, 0) rgb(0, 0, 0);
     border-radius: 2rem;
 }
-@media only screeb and (max-width: 768px){
+@media only screen and (max-width: 768px){
 
 #botoes {
 
   width: auto;
   height: auto;
-  display: flex;
-  justify-content: center;
+
 
 }
 
@@ -53,14 +52,15 @@ button {
   height:auto;
   padding: auto auto;
   border: auto solid #1a1b1b;
-  position: relative;
+  justify-content: center;
+  position: auto;
 }
 
 
 
 }
 
-@media only screeb and (max-width: 100px){
+@media only screen and (max-width: 100px){
 
   #botoes {
   
@@ -76,20 +76,15 @@ button {
     font-size: auto;
     width: auto;
     height:auto;
-    padding: auto auto;
+    padding: auto;
     border: auto solid #1a1b1b;
+    padding-right: 15%;
     position: relative;
   }
   
   
   
   }
-
-
-
-
-
-
 
 
 *{
@@ -102,7 +97,7 @@ button {
     padding: 0;
   }
 button {
-  font-size: 2em;
+  font-size: 2.5em;
   background: #271bcc;
   color: #fff;
   border: 0.15rem solid #1a1b1b;
