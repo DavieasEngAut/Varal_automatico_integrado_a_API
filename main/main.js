@@ -18,7 +18,6 @@ function Expor(){
 
     
       console.log(document.getElementById('Automatico').value)
-      window.alert("Modo Automatico Ativado")
       document.getElementById('Automatico').value = "manual"
       document.getElementById('Automatico').textContent = "MODO MANUAL"
 

@@ -1,8 +1,7 @@
 body    {
-    width: 100vh;
-    height: auto;
-    background: linear-gradient(#192a3b 50%, #0c6eca 70%, #1508ca 90%);
-    font-size: 15px;
+    width: 97vh;
+    height: 100vh;
+    background: linear-gradient(#192a3b 70%, #0c6eca 80%, #1508ca 100%);
     
 }
 
@@ -19,15 +18,14 @@ text-align: center;
 
 #botoes {
     
-    max-width: 100vh;
-    width: 15%;
+    width: 300vh;
     margin: 1rem auto;
     padding: 6rem;
     text-align: center;
-    background: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0);
     
     width: 80%;
-    height: 20%;
+    height: 60vh;
     box-shadow: #1a1b1b;
     box-sizing: 45%;
     border-color: rgb(0, 0, 0) rgb(0, 0, 0) rgb(0, 0, 0) rgb(0, 0, 0);
@@ -45,29 +43,62 @@ text-align: center;
 }
 @media only screen and (max-width: 768px){
 
+  body    {
+    width: 97vh;
+    height: auto;
+    background: linear-gradient(#192a3b 50%, #0c6eca 70%, #1508ca 90%);
+    font-size: 15px;
+    
+}
+
+h1{
+
+  font-size: 20px;
+  padding-top: 0.5rem;
+  color: rgb(255, 255, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: inset, black;
+  text-align: top;
+
+
+}
+
 #botoes {
 
   width: 200vh;
   height: 150vh;
 
 
-}
+  }
 
 button {
 
-  font-size: 0.5mm;
-  width: 40vh;
-  height: 30vh;
+  font-size: 0.3cm;
+  width: 35vh;
+  height: 25vh;
   border: 0.5mm solid #1a1b1b;
+  display: table-column;
   justify-content: center;
   position: right;
-}
+  }
 
 
 
 }
 
 @media only screen and (max-width: 300){
+
+  h1{
+
+    font-size: 20px;
+    padding-top: 0.5rem;
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: inset, black;
+    text-align: right;
+
+
+  }
 
   #botoes {
   
@@ -81,13 +112,13 @@ button {
   
   button {
   
-    font-size: 0.5rem;
-    width: 10vh;
-    height: 5vh;
+    font-size: 0.2em;
+    width: 50%;
+    height: 35%;
     padding: 2rem;
-    border: 1px solid #1a1b1b;
+    border: 1px solid #171818;
     display: grid;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
    
   
@@ -107,7 +138,7 @@ button {
     padding: 0;
   }
 button {
-  font-size: 2em;
+  font-size: 1em;
   background: #271bcc;
   color: #fff;
   border: 0.15rem solid #1a1b1b;
