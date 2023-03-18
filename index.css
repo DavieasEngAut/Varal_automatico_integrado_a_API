@@ -1,15 +1,15 @@
 body    {
-
-    background-color: rgb(10, 7, 189);
+    width: 100vh;
+    height: auto;
+    background: linear-gradient(#192a3b 50%, #0c4eca 50%);
     font-size: 15px;
     
 }
 
 h1 {
 
-flex: auto;
-padding-top: 2em;
-color: rgb(0, 0, 0);
+padding-top: 0.5em;
+color: rgb(255, 255, 255);
 font-family: Arial, Helvetica, sans-serif;
 box-shadow: inset, black;
 text-align: center;
@@ -19,70 +19,80 @@ text-align: center;
 
 #botoes {
     
-    max-width: 100rem;
-    width: 50%;
+    max-width: 100vh;
+    width: 25%;
     margin: 1rem auto;
     padding: 6rem;
     text-align: center;
     background: rgb(255, 255, 255);
-    border: 0.3rem solid #192a3b;
     
     width: 90%;
     height: 47%;
-    border: 1em solid; 
     box-shadow: #1a1b1b;
     box-sizing: 50%;
     border-color: rgb(0, 0, 0) rgb(0, 0, 0) rgb(0, 0, 0) rgb(0, 0, 0);
     border-radius: 2rem;
+
+    box-shadow:
+    2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    100px 100px 80px rgba(0, 0, 0, 0.07)
+  ;
+
+
 }
 @media only screen and (max-width: 768px){
 
 #botoes {
 
-  width: auto;
-  height: auto;
+  width: 200vh;
+  height: 150vh;
 
 
 }
 
 button {
 
-  font-size: auto;
-  width: auto;
-  height:auto;
-  padding: auto auto;
-  border: auto solid #1a1b1b;
+  font-size: 0.5rem;
+  width: 40vh;
+  height: 30vh;
+  border: 0.5mm solid #1a1b1b;
   justify-content: center;
-  position: auto;
+  position: right;
 }
 
 
 
 }
 
-@media only screen and (max-width: 100px){
+@media only screen and (max-width: 300){
 
   #botoes {
   
-    width: auto;
-    height: auto;
-    border: auto;
-    display: flex;
+    width: 0vh;
+    height: 0vh;
+    border: 0vh;
     justify-content: center;
+    align-items: center;
   
   }
   
   button {
   
-    font-size: 0.5vh;
-    width: auto;
-    height:auto;
-    padding: auto;
-    border: auto solid #1a1b1b;
-    padding-right: auto;
-    position: relative;
-  }
+    font-size: 0.5rem;
+    width: 10vh;
+    height: 5vh;
+    padding: 2rem;
+    border: 1px solid #1a1b1b;
+    display: grid;
+    justify-content: space-around;
+    align-items: center;
+   
   
+  }
   
   
   }
@@ -98,7 +108,7 @@ button {
     padding: 0;
   }
 button {
-  font-size: 2.5em;
+  font-size: 2em;
   background: #271bcc;
   color: #fff;
   border: 0.15rem solid #1a1b1b;
@@ -136,11 +146,11 @@ button.slide_from_left::after {
   right: 100%;
 }
   
-#creditos {
+/*.creditos {
 display: flex;
 justify-content: bottom;
 position: relative;
 font-size: 0.88rem;
 text-align: auto;
 
-}
+}*/
