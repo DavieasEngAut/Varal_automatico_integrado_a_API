@@ -66,6 +66,7 @@ button {
   
     width: auto;
     height: auto;
+    border: auto;
     display: flex;
     justify-content: center;
   
@@ -73,12 +74,12 @@ button {
   
   button {
   
-    font-size: auto;
+    font-size: 0.5vh;
     width: auto;
     height:auto;
     padding: auto;
     border: auto solid #1a1b1b;
-    padding-right: 15%;
+    padding-right: auto;
     position: relative;
   }
   
