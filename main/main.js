@@ -1,7 +1,7 @@
 function Retrair(){
 if (document.getElementById('Retrair').value == "retraindo!"){
  
-}
+  }
 
 }
 
@@ -10,7 +10,7 @@ function Expor(){
 
   }
   
-  }
+}
 
   function Automatico(){
     
@@ -25,8 +25,6 @@ function Expor(){
       
 
     }else{
-  
-      window.alert("Modo Manual Ativado")
       
       console.log(document.getElementById('Automatico').value)
       document.getElementById('Automatico').value = "automatico"

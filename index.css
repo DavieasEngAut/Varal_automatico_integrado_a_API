@@ -1,14 +1,14 @@
 body    {
     width: 100vh;
     height: auto;
-    background: linear-gradient(#192a3b 50%, #0c4eca 50%);
+    background: linear-gradient(#192a3b 50%, #0c6eca 70%, #1508ca 90%);
     font-size: 15px;
     
 }
 
 h1 {
-
-padding-top: 0.5em;
+font-size: 20px;
+padding-top: 0.5rem;
 color: rgb(255, 255, 255);
 font-family: Arial, Helvetica, sans-serif;
 box-shadow: inset, black;
@@ -20,21 +20,20 @@ text-align: center;
 #botoes {
     
     max-width: 100vh;
-    width: 25%;
+    width: 15%;
     margin: 1rem auto;
     padding: 6rem;
     text-align: center;
     background: rgb(255, 255, 255);
     
-    width: 90%;
-    height: 47%;
+    width: 80%;
+    height: 20%;
     box-shadow: #1a1b1b;
-    box-sizing: 50%;
+    box-sizing: 45%;
     border-color: rgb(0, 0, 0) rgb(0, 0, 0) rgb(0, 0, 0) rgb(0, 0, 0);
-    border-radius: 2rem;
-
+    border-radius: 5mm;
     box-shadow:
-    2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    2.8px 2.8px 2.2px rgba(0, 0, 0, 0.767),
     6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
     12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
     22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
@@ -56,7 +55,7 @@ text-align: center;
 
 button {
 
-  font-size: 0.5rem;
+  font-size: 0.5mm;
   width: 40vh;
   height: 30vh;
   border: 0.5mm solid #1a1b1b;
