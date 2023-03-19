@@ -1,7 +1,7 @@
 body    {
   width: 150vh;
   height: auto;
-  background: linear-gradient(#192a3b 50%, #0c4eca 80%)
+  background-color: #011b3d;
   
 }
 
@@ -110,7 +110,7 @@ right: 100%;
   
   button {
   
-  font-size: 0.90rem;
+  font-size: 0.60rem;
   width: 140%;
   height: 140%;
   border: 0.5mm solid #1a1b1b;
@@ -138,8 +138,8 @@ right: 100%;
   
   #botoes {
   
-    width: 15vh;
-    height: 5vh;
+    width: 20vh;
+    height: 10vh;
     border: 5vh;
     justify-content: center;
     align-items: center;
@@ -148,9 +148,9 @@ right: 100%;
   
   button {
   
-    font-size: 0.5rem;
-    width: 10vh;
-    height: 5vh;
+    font-size: 1rem;
+    width: 10;
+    height: 25;
     padding: 2rem;
     border: 1px solid #1a1b1b;
     display: grid;
