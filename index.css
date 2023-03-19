@@ -94,9 +94,12 @@ bottom: 0;
 left: -100%;
 right: 100%;
 }
-
+/*Mobile*/
 @media only screen and (max-width: 768px){
-
+  body    {
+    width: 50vh;
+    height: auto;
+  }
   #botoes {
   
   width: 30;
@@ -107,20 +110,26 @@ right: 100%;
   
   button {
   
-  font-size: 0.53rem;
-  width: 35%;
-  height: 35%;
+  font-size: 0.90rem;
+  width: 140%;
+  height: 140%;
   border: 0.5mm solid #1a1b1b;
-  display: center;
+  display: flex;
   justify-content: center;
-  position: right;
+  align-items: center;
+  position: center;
   }
   
   
   
   }
-  
+  /*Desktop*/
   @media only screen and (min-width: 768){
+    body    {
+      width: 150vh;
+      height: auto;
+      
+    }
     h1 {
 
       font-size: 0.5px;
