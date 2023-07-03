@@ -1,9 +1,12 @@
 function Retrair(){
 if (document.getElementById('Retrair').value == "retraindo!"){
- 
+       
   }
 
+  
 }
+
+ 
 
 function Expor(){
   if (document.getElementById('Expor').value == "expondo!"){

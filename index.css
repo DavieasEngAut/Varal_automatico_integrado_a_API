@@ -11,6 +11,7 @@ h1 {
 padding-top: 0.5em;
 display: flex;
 align-items: center;
+align-content: center;
 position: absolute;
 padding-left: 15%;
 color: rgb(255, 255, 255);
@@ -23,6 +24,10 @@ text-align: center;
 
 #botoes {
   
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+  flex-direction: column;
   max-width: 100vh;
   width: 45%;
   height: 45%;
